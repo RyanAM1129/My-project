@@ -229,7 +229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pipe: {fileID: 2254759113325407646, guid: 5ef59e059dc756542a16d8d7a875b2ef, type: 3}
   spawnRate: 5
-  heightOffset: 9.5
+  heightOffset: 10
 --- !u!4 &287158883
 Transform:
   m_ObjectHideFlags: 0
@@ -326,7 +326,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.2741189, g: 0.37298268, b: 0.754717, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
