@@ -16,9 +16,11 @@ public class BirdScript : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && birdIsAlive)
+        if ((Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.Mouse0)) && birdIsAlive)
         {
             myRigidbody.linearVelocity = Vector2.up * flapStrength;
+        } else if (Input.GetKeyDown(KeyCode.Escape)) {
+            logic.pauseGame(); 
         }
 
         if (transform.position.y <= positionLowerLimit)
