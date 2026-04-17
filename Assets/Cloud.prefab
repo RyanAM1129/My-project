@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 2517845221283839617}
   - component: {fileID: 5598695020263728450}
   - component: {fileID: 4506300912654380933}
-  m_Layer: 3
+  m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -104,3 +104,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 324fe7d3ba91f594093747d4634f229b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  moveSpeed: 2.5
+  deadZone: -45
