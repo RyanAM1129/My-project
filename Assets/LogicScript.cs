@@ -9,11 +9,16 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public GameObject pauseMenuScreen;
 
-    [ContextMenu("Increase Score")]
+   [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
+        if (playerScore % 5 == 0)
+        {
+            PipeMoveScript.SpeedUp(PipeMoveScript.moveSpeed / 2); //50% Speed Increase
+            PipeSpawnScript.globalSpawnCooldown *= 0.75f; //25% decrease in spawn cooldown
+        }
 
     }
  
@@ -36,7 +41,7 @@ public class LogicScript : MonoBehaviour
     public void resumeGame()
     {
         pauseMenuScreen.SetActive(false);
-        Time.timeScale = 1f;
+        Time.timeScale = 1.0f;
     }
 
     public void quitGame()

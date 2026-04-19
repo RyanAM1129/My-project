@@ -4,7 +4,7 @@ public class PipeSpawnScript : MonoBehaviour
 {
 
     public GameObject pipe;
-    public float spawnRate = 2.0f;
+    public static float globalSpawnCooldown = 10.0f;
     private float timer = 0;
     public float heightOffset = 9.5f;
     private int spawnCount = 0;
@@ -18,7 +18,7 @@ public class PipeSpawnScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(timer < spawnRate) 
+        if(timer < globalSpawnCooldown) 
         {
             timer += Time.deltaTime;
         } 

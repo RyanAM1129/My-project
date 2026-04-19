@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PipeMoveScript : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;
+    public static float moveSpeed = 5.0f;
     public float deadZone = -45;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -21,5 +21,11 @@ public class PipeMoveScript : MonoBehaviour
             Debug.Log("Pipe Deleted");
             Destroy(gameObject);
         }
+    }
+
+    [ContextMenu("Speed Up")]
+    public static void SpeedUp(float speed)
+    {
+        moveSpeed += speed;
     }
 }
